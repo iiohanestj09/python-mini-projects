@@ -1,14 +1,14 @@
 import random
 
+# Input panjang password
+passLen = int(input("Masukkan Panjang Password: "))
+
 #! Versi 1
 import math
 
 alpha = "abcdefghijklmnopqrstuvwxyz"
 num = "0123456789"
 special = "@#$%^&*-_+~"
-
-# Input panjang password
-passLen = int(input("Masukkan Panjang Password: "))
 
 # Panjang password pakai formula 50-30-20
 alphaLen = passLen // 2
