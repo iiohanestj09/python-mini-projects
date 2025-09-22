@@ -1,0 +1,17 @@
+[
+    {
+        "nama": "Putra",
+        "umur": 20,
+        "tahunLahir": 2005
+    },
+    {
+        "nama": ["Budi", "Budo", "Badu"],
+        "umur": 99,
+        "tahunLahir": 1945
+    },
+    {
+        "nama": "Ary",
+        "umur": 30,
+        "tahunLahir": 1999
+    }
+]
