@@ -11,8 +11,23 @@ def main(username):
     
     if data:
         data = data[0]
-        followersMatch = re.search(r'([\d,.]+[KMB]?) Followers', data)
-        followingMatch = re.search(r'([\d,.]+[KMB]?) Following', data)
+        followers = data[0][:-9].strip()
+        following = data[1][:-9].strip()
+        posts = re.findall(r'\d+[,]*', data[2])[0]
+        name = re.findall(r'name":"\w*[\s]+\w*"', page.text)[-1][7:-1]
+        aboutinfo = re.findall(r'"description":"([^"]+)"', page.text)[0]
+        instagram_profile = {
+            'success': True,
+            'profile': {
+                'name': name,
+                'profileurl': url,
+                'username': username,
+                'followers': followers,
+                'following': following,
+                'posts': posts,
+                'aboutinfo': aboutinfo
+            }
+        }
         
 
 
